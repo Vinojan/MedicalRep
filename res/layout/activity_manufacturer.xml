@@ -1,0 +1,117 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/ScrollView01"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:fillViewport="true"
+android:scrollbars="none" xmlns:app="http://schemas.android.com/tools">
+
+<LinearLayout android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        app:context="com.example.medicalrep.Manufacturer" >
+
+        <TextView
+            android:id="@+id/tv_companyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:text="@string/company_name"
+            android:textColor="#0000FF" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_companyName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:text="@string/address"
+            android:textColor="#0000FF" />
+
+        <TextView
+            android:id="@+id/tv_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_telephone"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp"
+            android:text="@string/e_mail"
+            android:textColor="#0000FF" />
+
+        <TextView
+            android:id="@+id/tv_telephone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_address"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/telephone"
+            android:textColor="#0000FF" />
+
+        <Button
+            android:id="@+id/bt_editDetail"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_mail"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:onClick="editDetail"
+            android:text="@string/edit_detail" />
+
+        <Button
+            android:id="@+id/bt_viewOrder"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bt_updateProduct"
+            android:layout_centerHorizontal="true"
+            android:onClick="viewOrders"
+            android:text="@string/view_orders" />
+
+        <Button
+            android:id="@+id/bt_updateProduct"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bt_editDetail"
+            android:layout_centerHorizontal="true"
+            android:onClick="updateProducts"
+            android:text="@string/update_product" />
+
+        <TextView
+            android:id="@+id/tv_deactivateAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bt_changePassword"
+            android:layout_marginTop="32dp"
+            android:layout_toRightOf="@+id/tv_mail"
+            android:clickable="true"
+            android:onClick="deactivateAccount"
+            android:text="@string/deactivate_account"
+            android:textColor="#2d226f" />
+
+        <Button
+            android:id="@+id/bt_changePassword"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/bt_updateProduct"
+            android:layout_below="@+id/bt_viewOrder"
+            android:onClick="changePassword"
+            android:text="@string/change_password" />
+    </RelativeLayout>
+
+</LinearLayout>
+</ScrollView>

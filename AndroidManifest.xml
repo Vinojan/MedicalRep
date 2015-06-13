@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.medicalrep"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS">
+    </uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_SMS">
+    </uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SignUpAsManufacturerActivity"
+            android:label="@string/title_activity_sign_up_as_manufacturer"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.medicalrep.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SignUpPharmacyActivity"
+            android:label="@string/title_activity_sign_up_pharmacy"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.medicalrep.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Pharmacist"
+            android:label="@string/title_activity_pharmacist" >
+        </activity>
+        <activity
+            android:name=".Manufacturer"
+            android:label="@string/title_activity_manufacturer" >
+        </activity>
+        <activity
+            android:name=".ProductUpdate"
+            android:label="@string/title_activity_product_update"
+            android:parentActivityName=".Manufacturer" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.medicalrep.Manufacturer" />
+        </activity>
+        <activity
+            android:name=".EditPharmacistDetail"
+            android:label="@string/title_activity_edit_pharmacist_detail"
+            android:parentActivityName=".Pharmacist" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.medicalrep.Pharmacist" />
+        </activity>
+        <activity
+            android:name=".EditManufacturerDetail"
+            android:label="@string/title_activity_edit_manufacturer_detail"
+            android:parentActivityName=".Manufacturer" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.medicalrep.Manufacturer" />
+        </activity>
+        <activity
+            android:name=".AddNewProduct"
+            android:label="@string/title_activity_add_new_product" >
+        </activity>
+        <activity
+            android:name=".ManufacturerViewOrders"
+            android:label="@string/title_activity_manufacturer_orders"
+            android:parentActivityName=".Manufacturer" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.medicalrep.Manufacturer" />
+        </activity>
+        <activity
+            android:name=".PharmacyViewOrders"
+            android:label="@string/title_activity_pharmay_orders"
+            android:parentActivityName=".Pharmacist" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.medicalrep.Pharmacist" />
+        </activity>
+        <activity
+            android:name=".OrderingProducts"
+            android:label="@string/title_activity_ordering_products" >
+        </activity>
+        <activity
+            android:name=".EditProductDetail"
+            android:label="@string/title_activity_edit_product_detail"
+            android:parentActivityName=".ProductUpdate" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.medicalrep.ProductUpdate" />
+        </activity>
+        <activity
+            android:name=".AcceptOrder"
+            android:label="@string/title_activity_accept_order"
+            android:parentActivityName=".ManufacturerViewOrders" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.medicalrep.ManufacturerViewOrders" />
+        </activity>
+        <activity
+            android:name=".ViewOrder"
+            android:label="@string/title_activity_view_order"
+            android:parentActivityName=".PharmacyViewOrders" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.medicalrep.PharmacyViewOrders" />
+        </activity>
+        <activity
+            android:name=".ChangePassword"
+            android:label="@string/title_activity_change_password" >
+        </activity>
+        <activity
+            android:name=".DeactivateAccount"
+            android:label="@string/title_activity_deactivate_account" >
+        </activity>
+    </application>
+
+</manifest>
